@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_service?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+jwt:
+  secret: "NjZkNTY5ZDA3ZGFjNDdmZTM1NjdiMjY3Njc1MjdmNTk="  # 256-bit base64
+  expiration: "3600000"  # 1 hour in ms
